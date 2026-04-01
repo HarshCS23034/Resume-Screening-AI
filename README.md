@@ -52,5 +52,5 @@ The system uses a **Random Forest Classifier** which performs exceptionally well
 - **Multi-Label Features**: Skills (Binarized).
 - **Scaling**: All numeric features are standardized using `StandardScaler`.
 
----
-*Built with ❤️ for Modern Recruitment.*
+## 🚀 Live Demo
+[Click here to view the app] => (https://resume-screening-ai-gd9p.vercel.app/))
