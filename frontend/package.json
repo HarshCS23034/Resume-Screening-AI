@@ -4,7 +4,7 @@
   "description": "Premium AI Resume Screening UI",
   "main": "index.html",
   "scripts": {
-    "start": "live-server ."
+    "start": "node script.js"
   },
   "devDependencies": {
     "live-server": "^1.2.2"
