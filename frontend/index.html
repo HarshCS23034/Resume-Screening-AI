@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Intelligence Pro | AI Screening</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Resume <span class="accent">Intelligence</span> Pro</h1>
+            <p>Advanced AI screening system for modern recruiters.</p>
+        </header>
+
+        <main class="glass-card">
+            <form id="predictionForm">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="Name">Candidate Name</label>
+                        <input type="text" id="Name" name="Name" placeholder="e.g. Ashley Ali" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="Skills">Skills (comma separated)</label>
+                        <input type="text" id="Skills" name="Skills" placeholder="e.g. Python, SQL, TensorFlow" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="Experience">Experience (Years)</label>
+                        <input type="number" id="Experience" name="Experience (Years)" placeholder="0" min="0" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="Education">Education</label>
+                        <select id="Education" name="Education" required>
+                            <option value="B.Sc">B.Sc</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="M.Tech">M.Tech</option>
+                            <option value="MBA">MBA</option>
+                            <option value="PhD">PhD</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="JobRole">Job Role</label>
+                        <select id="JobRole" name="Job Role" required>
+                            <option value="Data Scientist">Data Scientist</option>
+                            <option value="AI Researcher">AI Researcher</option>
+                            <option value="Software Engineer">Software Engineer</option>
+                            <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="Projects">Projects Count</label>
+                        <input type="number" id="Projects" name="Projects Count" placeholder="0" min="0" required>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="AIScore">AI Potential Score (0-100)</label>
+                        <input type="range" id="AIScore" name="AI Score (0-100)" min="0" max="100" value="50">
+                        <div class="range-value" id="rangeValue">50</div>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span class="btn-text">Screen Candidate</span>
+                    <div class="btn-loader"></div>
+                </button>
+            </form>
+
+            <div id="resultContainer" class="result-card hidden">
+                <h3>Screening Result</h3>
+                <div id="predictionResult" class="prediction-value">---</div>
+                <p id="resultMsg" class="result-msg"></p>
+                <button id="resetBtn">New Screening</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
